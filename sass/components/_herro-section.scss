@@ -1,0 +1,61 @@
+.herro {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 600px;
+    max-width: 1600px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $backgroundhf-color;
+    background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+                    ), 
+                    url(../images/herro.jpg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
+                0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.herro__title {
+    margin: 0 auto;
+
+    width: 696px;
+
+    color: $title-color;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.herro__btn {
+    display: inline-block;
+
+    min-width: 200px;
+    margin-top: 30px;
+    padding: 10px 32px;
+
+    background-color: $backgroundbutton-color;
+    color: $backgroundbody-color;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    transition: background-color $timeanime $functionanime,
+    box-shadow $timeanime $functionanime;
+
+    &:hover,
+    &:focus {
+        background-color: $backgroundbtnfocus;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

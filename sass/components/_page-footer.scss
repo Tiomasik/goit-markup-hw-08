@@ -1,0 +1,146 @@
+.footer {
+    padding: 60px 0;
+
+    max-width: 1600px;
+
+    background-color: $backgroundhf-color;
+}
+
+.footer--conteiner {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-icon {
+    margin-left: 70px;
+
+    &__list {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 44px;
+        height: 44px;
+    
+        color: #FFFFFF;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+    
+        transition: background-color $timeanime $functionanime;
+
+        &:hover,
+        &:focus {
+            background-color: $backgroundbutton-color;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        
+        color: $title-color;
+        
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+}
+
+.address {
+    margin-top: 20px;
+    margin-bottom: 9px;
+
+    color: $title-color;
+
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+}
+
+.footer-form {
+    width: 570px;
+    height: 86;
+
+    margin-left: auto;
+
+    &__submit {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        text-transform: uppercase;
+    
+        color: $title-color;
+    }
+
+    &__mail {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__lable {
+        display: block;
+    }
+
+    &__input {
+        padding-left: 16px;
+        width: 358px;
+        height: 50px;
+    
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+    
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+    
+        color: rgba(255, 255, 255, 0.6);
+
+        &__::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: calc(20 / 16);
+            letter-spacing: 0.03em;
+        
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 200px;
+    
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 29px;
+        padding-right: 29px;
+    
+        font-weight: 700;
+        font-size: 16px;
+        line-height: calc(30 / 16);
+    
+        letter-spacing: 0.06em;
+    
+        color: $title-color;
+        background-color: $backgroundbutton-color;
+    
+        transition: box-shadow $timeanime $functionanime,
+            background-colo $timeanime, $functionanime;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            background-color: $backgroundbtnfocus;
+        }
+    }
+}
