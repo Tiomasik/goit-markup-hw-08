@@ -348,6 +348,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
   .header--conteiner {
@@ -374,10 +377,6 @@ body {
   color: #FFFFFF;
 }
 
-.nav {
-  margin-left: 93px;
-}
-
 .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +385,16 @@ body {
 }
 @media screen and (max-width: 767px) {
   .nav-list {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+    margin-left: 40px;
   }
 }
 
@@ -403,25 +411,40 @@ body {
 .nav-link:hover, .nav-link:focus {
   color: #2196F3;
 }
+@media screen and (max-width: 767px) {
+  .nav-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+}
 
 .current {
   color: #2196F3;
   position: relative;
 }
-.current::after {
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196F3;
+@media screen and (min-width: 768px) {
+  .current::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196F3;
+  }
 }
 
 .header--nav-link {
   padding: 32px 0;
+}
+@media screen and (max-width: 767px) {
+  .header--nav-link {
+    padding: 0;
+  }
 }
 
 .menu-btn {
@@ -461,8 +484,8 @@ body {
   .menu {
     position: absolute;
     top: 0;
-    left: -1px;
-    width: 480px;
+    left: 0;
+    width: 100%;
     height: 796px;
     background-color: #FFFFFF;
   }
@@ -478,21 +501,52 @@ body {
   right: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: block;
+  }
+}
+
 .header__contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
-  gap: 50px;
+  gap: 30px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .header__contact-list {
-    display: inline-block;
+    margin-left: 305px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 678px) and (max-width: 1199px) {
   .header__contact-list {
-    display: none;
+    display: inline-block;
+    margin-left: 84px;
   }
 }
 
@@ -509,6 +563,30 @@ body {
 .contact-link:hover {
   color: #2196F3;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link__icon--letter {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-link__icon--letter {
+    width: 16px;
+    height: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-link__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
+}
 
 .header--contact-link {
   display: -webkit-inline-box;
@@ -522,9 +600,13 @@ body {
   font-size: 14px;
   color: #757575;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header--contact-link {
     padding: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {

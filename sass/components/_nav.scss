@@ -1,13 +1,14 @@
-.nav {
-    margin-left: 93px;
-}
-
 .nav-list {
     display: flex;
     gap: 50px;
 
     @media screen and (max-width: 767px) {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        margin-top: 48px;
+        margin-left: 40px;
     }
 }
 
@@ -27,30 +28,43 @@
     &:focus {
         color: $backgroundbutton-color;
     }
+
+    @media screen and (max-width: 767px) {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: calc(48 / 40);
+        letter-spacing: 0.02em;
+    }
 }
 
 .current {
     color: $backgroundbutton-color;
     position: relative;
 
-    &::after {
-        display: block;
-        content: "";
-    
-        position: absolute;
-        left: 0;
-        bottom: -1px;
-    
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-    
-        background-color: $backgroundbutton-color;
+    @media screen and (min-width: 768px) {
+        &::after {
+            display: block;
+            content: "";
+        
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+        
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+        
+            background-color: $backgroundbutton-color;
+        }
     }
 }
 
 .header--nav-link {
     padding: 32px 0;
+
+    @media screen and (max-width: 767px) {
+        padding: 0;
+    }
 }
 
 .menu-btn {
@@ -87,8 +101,8 @@
     @media screen and (max-width: 767px) {
         position: absolute;
         top: 0;
-        left: -1px;
-        width: 480px;
+        left: 0;
+        width: 100%;
         height: 796px;
 
         background-color: $backgroundbody-color;
@@ -103,4 +117,28 @@
     position: absolute;
     top: 10px;
     right: 15px;
+}
+
+.is-open {
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.menu-btn {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.navigation {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
 }

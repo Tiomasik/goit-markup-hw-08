@@ -1,14 +1,14 @@
 .header__contact-list {
     display: flex;
-    margin-left: auto;
-    gap: 50px;
+    gap: 30px;
 
-    @media screen and (max-width: 1200px) {
-        display: inline-block;
+    @media screen and (min-width: 1200px) {
+        margin-left: 305px;
     }
 
-    @media screen and (max-width: 767px) {
-        display: none;
+    @media screen and (min-width: 678px) and (max-width: 1199px) {
+        display: inline-block;
+        margin-left: 84px;
     }
 }
 
@@ -27,6 +27,29 @@
     &:hover {
         color: $backgroundbutton-color;
     }
+
+    &__icon--letter {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 14px;
+        height: 10px;
+    }
+    
+        @media screen and (min-width: 1200px) {
+            width: 16px;
+            height: 12px;
+        }
+    }
+    &__icon--phone {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 10px;
+            height: 16px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 10px;
+            height: 16px;
+        }
+    }
 }
 
 .header--contact-link {
@@ -39,8 +62,13 @@
 
     color: $paragraphs-color;
 
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         padding: 0;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: calc(14 / 12);
+        
+        letter-spacing: 0.02em;
     }
     
     &:first-child {
@@ -58,3 +86,4 @@
     margin-right: 10px;
     fill: currentColor;
 }
+
