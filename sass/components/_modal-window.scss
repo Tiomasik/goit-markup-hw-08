@@ -3,8 +3,20 @@
     top: 0px;
     left: 0px;
 
+    padding: 93px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 207px 0;
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //     padding: 221px 0;
+    // }
+
     width: 100%;
     height: 100%;
+
+    overflow-y: scroll;
 
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid #000000;
@@ -21,29 +33,38 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    max-width: 450px;
+    margin: 0 auto;
 
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: scale(0.3);
+    transform: scale(1);
 
-    min-width: 528px;
-    min-height: 581px;
+    transition: transform $timeanime $functionanime;
+    
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        max-width: 528px;
+            
+        transform: translate(-50%, -50%) scale(0.3);
+
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform $timeanime $functionanime;
+    }
 
     background-color: $backgroundbody-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform $timeanime $functionanime;
 }
 
 .modal-wind {
     position: relative;
-    min-width: 528px;
-    min-height: 581px;
+    // min-width: 528px;
+    // min-height: 581px;
 }
 
 .modal-btn {
@@ -83,7 +104,12 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    
     padding: 40px;
+    
+    // @media screen and (min-width: 1200px) {
+    //     padding: 40px;
+    // }
 }
 
 // .form-field {
@@ -204,18 +230,34 @@
     
     &__link {
         margin-left: 5px;
-    
+
         font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-    
+        font-size: 12px;
+        line-height: calc(14 / 12);
+        letter-spacing: 0.03em;
+        
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+        }
+
         color: $backgroundbutton-color;
 
         text-decoration: underline;
     }
 
     &__span {
-        margin-left: 8px
+        margin-left: 8px;
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: calc(14 / 12);
+        letter-spacing: 0.03em;
+        
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+        }
     }
 }
 
