@@ -336,6 +336,25 @@ body {
 .card {
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.customers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
 
 .header {
   border-bottom: 1px solid #ECECEC;
@@ -496,7 +515,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 796px;
+    height: auto;
     padding: 48px 40px;
     background-color: #FFFFFF;
   }
@@ -547,6 +566,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
 .menu-social__item {
@@ -723,9 +744,14 @@ body {
 .workers {
   margin-left: auto;
   margin-right: auto;
-  padding: 94px 0;
+  padding: 60px 0;
   max-width: 1600px;
   background-color: #F5F4FA;
+}
+@media screen and (min-width: 1200px) {
+  .workers {
+    padding: 94px 0;
+  }
 }
 .workers__title {
   margin-bottom: 50px;
@@ -735,12 +761,24 @@ body {
   text-align: center;
 }
 .workers__item {
-  width: calc((100% - 90px) / 4);
+  max-width: 100%;
+  margin-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
   background-color: #FFFFFF;
   text-align: center;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .workers__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .workers__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .workers__icon {
   padding-top: 30px;
@@ -1075,7 +1113,7 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
-  padding: 93px 0;
+  padding: 93px 15px;
   width: 100%;
   height: 100%;
   overflow-y: scroll;

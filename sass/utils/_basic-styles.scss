@@ -36,8 +36,18 @@ body {
 
 .card {
     display: block;
-    // flex-wrap: wrap;
-    // gap: $gap;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gap;
+    }
+}
+
+.customers__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
 }
 
 @mixin card-item($numbercard) {
