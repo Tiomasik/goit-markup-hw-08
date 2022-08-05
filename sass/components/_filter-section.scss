@@ -1,13 +1,22 @@
 .filter {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0;
+
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0;
+    }
 
     &__list {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: left;
+        
         gap: 8px;
 
         margin-bottom: 50px;
+
+        @media screen and (min-width: 768px) {
+            justify-content: center;
+        }
     }
 
     &__button {
@@ -36,7 +45,25 @@
 }
 
 .project__item {
-    @include card-item(3);
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    } 
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+        @include card-item(2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 0;
+        @include card-item(3);
+    }
+
+    &:first-child .project__subitem {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            padding-bottom: 56px;
+        }
+    }
 }
 
 .project__link {
@@ -58,6 +85,7 @@
 }
 
 .project__position {
+    z-index: -1;
     position: relative;
     overflow: hidden;
 }

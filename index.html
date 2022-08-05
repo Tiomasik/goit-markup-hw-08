@@ -35,7 +35,7 @@
                   <a class="nav-link header--nav-link" href="./portfolio.html">Портфолио</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link header--nav-link" href="./index.html">Контакты</a>
+                  <a class="nav-link header--nav-link" href="./index.html#contact">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -424,27 +424,31 @@
       </section>
     </main>
     <!-- Section Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <h2 class="visually-hidden">Футер</h2>
       <div class="conteiner footer--conteiner">
-        <div>
-          <a class="logo" href="./index.html" lang="en"
+        <div class="footer__contact footer__contact--card">
+          <a class="logo footer__logo" href="./index.html" lang="en"
             >Web<span class="logo__footer">Studio</span></a
           >
           <!-- Section Address -->
           <address class="address">
             <p>г. Киев, пр-т Леси Украинки, 26</p>
           </address>
-          <ul class="contact-list">
+          <ul class="contact-list footer__contact-list">
             <li class="contact-item footer--contact-item">
-              <a class="contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="contact-link footer__contact-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
             </li>
             <li class="contact-item footer--contact-item">
-              <a class="contact-link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="contact-link footer__contact-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
         </div>
-        <div class="footer-icon">
+        <div class="footer-icon footer__contact--card">
           <h3 class="footer-icon__subtitle">присоединяйтесь</h3>
           <ul class="footer-icon__list">
             <li class="footer-icon__item">
@@ -482,8 +486,8 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form">
-          <b class="footer-form__submit">Подпишитесь на рассылку</b>
+        <form class="footer-form footer__contact--card">
+          <h3 class="footer-form__submit">Подпишитесь на рассылку</h3>
           <div class="footer-form__mail">
             <label class="footer-form__lable">
               <input class="footer-form__input" type="email" name="mail" placeholder="E-mail" />
