@@ -484,12 +484,12 @@ body {
   height: 40px;
   border-color: transparent;
   background-color: #FFFFFF;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .menu-btn__icon {
   fill: #000;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn:hover .menu-btn__icon, .menu-btn:focus .menu-btn__icon {
   fill: #2196F3;
@@ -502,16 +502,17 @@ body {
 
 .menu {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 48px 40px;
+  background-color: #FFFFFF;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding: 48px 40px;
-    background-color: #FFFFFF;
+    display: none;
   }
 }
 

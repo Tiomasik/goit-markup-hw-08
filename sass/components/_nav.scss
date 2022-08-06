@@ -86,12 +86,11 @@
     border-color: transparent;
     background-color: $backgroundbody-color;
 
-    transition: fill $timeanime $functionanime;
-
     cursor: pointer;
 
     &__icon{
         fill: #000;
+        transition: fill $timeanime $functionanime;
     }
 
     &:hover &__icon,
@@ -107,16 +106,18 @@
 .menu {
     display: block;
 
-    @media screen and (max-width: 767px) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    
+    padding: 48px 40px;
+    
+    background-color: $backgroundbody-color;
 
-        padding: 48px 40px;
-
-        background-color: $backgroundbody-color;
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 
