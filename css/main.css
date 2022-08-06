@@ -502,17 +502,17 @@ body {
 
 .menu {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  padding: 48px 40px;
-  background-color: #FFFFFF;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .menu {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 48px 40px;
+    background-color: #FFFFFF;
   }
 }
 
