@@ -135,18 +135,6 @@
     color: $backgroundbutton-color;
 }
 
-.footer__contact-list {
-    margin-bottom: 60px;
-
-    @media screen and (min-width: 768px) {
-        margin: 0;
-    }
-
-    @media screen and (min-width: 1200px) {
-        margin: 0;
-    }
-}
-
 .footer--contact-item {
     &:not(:last-child) {
         margin-bottom: 9px;

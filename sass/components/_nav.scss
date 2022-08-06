@@ -1,8 +1,8 @@
-.nav {
-    @media screen and (max-width: 767px) {
-        margin-bottom: 306px;
-    }
-}
+// .nav {
+//     @media screen and (max-width: 767px) {
+//         margin-bottom: 306px;
+//     }
+// }
 
 .nav-list {
     display: flex;
@@ -108,12 +108,13 @@
 
     @media screen and (max-width: 767px) {
         display: block;
-        
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        z-index: 1000;
         
         padding: 48px 40px;
         
@@ -144,14 +145,19 @@
 }
 
 .navigation {
-    @media screen and (min-width: 768px) {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
         align-items: center;
     }
+}
 
+.menu-conteiner {
     @media screen and (max-width: 767px) {
-        display: block;
+        height: 100%;
     }
 }
 
